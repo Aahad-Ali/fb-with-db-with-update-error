@@ -119,6 +119,7 @@ function App() {
     e.preventDefault();
 
     // console.log('update',e)
+    console.log(editing)
 
     await updateDoc(doc(db, "posts", editing.editingId), {
       text: editing.editingText,
@@ -178,7 +179,7 @@ function App() {
                     type="submit"
                     className="btn btn-info"
                     onClick={(e) => {
-                      e.preventDefault();
+                    updatePost(e)
                     }}
                   >
                     Update
